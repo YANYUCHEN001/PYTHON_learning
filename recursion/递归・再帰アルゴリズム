@@ -1,0 +1,13 @@
+import turtle  #turtle which is called Python's turtle graphics module is used for illustrations 可以用来画图比如（五角星，乌龟等等）
+
+myTurtle = turtle.Turtle() #Turtle was used for spiral recursively.(用来画螺旋)
+myWin = turtle.Screen() #To show a screen for visualizion
+
+def drawSpiral(myTurtle, lineLen):#recursive function was implenmented by function
+    if lineLen > 0:    # the terminal condition
+        myTurtle.forward(lineLen)  #by turtle function,it call move forward along with the length 
+        myTurtle.right(90) #not only the length but also the angle 
+        drawSpiral(myTurtle,lineLen-5) #the basic recursion function
+
+drawSpiral(myTurtle,100)          #the basic recursion function was divided into two parts:forword move right-turning 90
+myWin.exitonclick()      
